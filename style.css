@@ -44,7 +44,7 @@ main {
   border: none;
   outline: none;
   background: transparent;
-  padding: 1.4em;
+  /* padding: 1.4em; */
   font-weight: 16px;
   min-width: 5em;
   /* background-color: black;
