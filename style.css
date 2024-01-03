@@ -2,15 +2,15 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 main {
-    height: 100vh;
-    background: linear-gradient(135deg, #01baef, #380036);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #01baef, #380036);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .todo-app {
@@ -23,9 +23,9 @@ main {
 }
 
 .todo-app h1 {
-    font-size: 1.5rem;
-    color: #0077b6;
-    margin-bottom: 0.75em;
+  font-size: 1.5rem;
+  color: #0077b6;
+  margin-bottom: 0.75em;
 }
 
 .search {
@@ -40,100 +40,109 @@ main {
 }
 
 .search input {
-    flex: 1;
-    border: none;
-    outline: none;
-    background: transparent;
-    padding: 1.4em;
-    font-weight: 16px;
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 1.4em;
+  font-weight: 16px;
+  min-width: 5em;
+  /* background-color: black;
+    color: white; */
 }
 
 .search button {
-    background: orange;
-    border: none;
-    outline: none;
-    border-radius: 50em;
-    padding: 1em 3em;
-    background: #c8b6ff;
-    color: #fff;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 3em;
+  background: orange;
+  border: none;
+  outline: none;
+  border-radius: 50em;
+  padding: 1em 3em;
+  background: #c8b6ff;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 3em;
 }
 
 ul li {
-    list-style: none;
-    font-size: 1.1rem;
-    padding: 0.9em 0.5em 0.9em 3em;
-    user-select: none;
-    cursor: pointer;
-    position: relative;
+  list-style: none;
+  font-size: 1.1rem;
+  padding: 0.9em 0.5em 0.9em 3em;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
 }
 
 ul li::before {
-    content: '';
-    position: absolute;
-    height: 1.7em;
-    width: 1.7em;
-    border-radius: 50%;
-    background-image: url(./images/unchecked.png);
-    background-size: cover;
-    background-position: center;
-    top: 0.65em;
-    left: 0.5em;
+  content: "";
+  position: absolute;
+  height: 1.7em;
+  width: 1.7em;
+  border-radius: 50%;
+  background-image: url(./images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 0.65em;
+  left: 0.5em;
 }
 
 ul li.checked {
-    color: #555;
-    text-decoration: line-through;
+  color: #555;
+  text-decoration: line-through;
 }
 
 ul li.checked::before {
-    background-image: url(./images/checked.png);
+  background-image: url(./images/checked.png);
 }
 
 ul li span {
-    position: absolute;
-    right: 0;
-    top: 5px;
-    width: 2em;
-    height: 2em;
-    font-size: 1.5rem;
-    color: #555;
-    line-height: 2.5em;
-    text-align: center;
-    border-radius: 50%;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 2em;
+  height: 2em;
+  font-size: 1.5rem;
+  color: #555;
+  line-height: 2.5em;
+  text-align: center;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 ul li span:hover {
-    background: #edeef0;
+  background: #edeef0;
 }
 
 .info {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.info-socials {
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 0.5em;
+}
+
+a {
+  color: currentColor;
+  padding: 0 0.5em;
+}
+
+@media (max-width: 640px) {
+  .todo-app {
+    max-width: 80%;
   }
-  
-  .info-socials{
-    color: white;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 0.5em;
-  }
-  
-  a{
-    color: currentColor;
-    padding: 0 0.5em;
-  }
+}
